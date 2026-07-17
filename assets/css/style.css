@@ -68,6 +68,11 @@ img {
   margin: 20px 0;
 }
 
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* nav */
 
 nav {
@@ -141,10 +146,33 @@ nav a:hover {
   max-width: 200px;
 }
 
+/* badge */
+
+.badge {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.badge img {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.badge img:hover {
+  cursor: cell;
+}
+
 /* text */
 
 .pink-text {
-  color:rgb(227, 124, 173);
+  color: rgb(227, 124, 173);
+}
+
+.small-text {
+  font-size: 0.6rem;
+  color: rgb(68, 68, 68);
 }
 
 /* home page */
@@ -159,4 +187,35 @@ nav a:hover {
 
 .subpage {
   margin: 2vw;
+}
+
+.notespage {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding: 0 10vw 0 10vw;
+}
+
+/* notes */
+
+.notes-grid {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.note-box {
+  /* border: 1px solid #ddd; */
+  border: 1px solid rgb(255, 200, 227);
+  border-radius: 12px;
+  padding: 16px 20px;
+  flex: 1 1 300px;   /* grow, shrink, base width 250px */
+  max-width: 500px;  /* keeps boxes from stretching too wide on big screens */
+  background-color: #fff;
+}
+
+.note-box h3 {
+  margin-top: 0;
 }
