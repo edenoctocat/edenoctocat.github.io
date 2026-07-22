@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<title>my stuff</title>
+  		<link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+
+    <body>
+        <div class="badge">
+            <a href="/">
+                <img src="/assets/images/octocat-2.png" alt="home">
+            </a>
+        </div>
+
+        <div class="subpage">
+            <p class="pink-text">
+                here's a collection of some of my stuff.
+            </p>
+            
+            <div class="img-gallery">
+                <div class="gallery-item" id="ducky">
+                    <img src="/assets/images/my-stuff/ducky.jpeg">
+                    <div class="info-content">
+                        <p>this is a goose in hamburg. watercolor.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/my-stuff/curly-grate.jpeg">
+                    <div class="info-content">        
+                        <p>this is in hamburg. watercolor on paper.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/my-stuff/copenhagen.jpeg">
+                    <div class="info-content">        
+                        <p>this is in copenhagen. pencil on paper.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" id="double-ring">
+                    <img src="/assets/images/my-stuff/double-ring.jpg">
+                    <div class="info-content">        
+                        <p>my mom wears two rings--one is her wedding ring, and the other is a 
+                            tinted glass 'aquamarine' birthstone which was originally given to me. 35mm color 200.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/my-stuff/north-carolina-pines.jpeg">
+                    <div class="info-content">        
+                        <p>these are pines in north carolina. the state tree is the loblolly pine. watercolor.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/my-stuff/wonder-bread.jpeg">
+                    <div class="info-content">
+                        <p>the wonder bread is in the trash (through the eyes of corita kent). watercolor.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/my-stuff/graffiti.jpg">
+                    <div class="info-content">        
+                        <p>i liked the way the graffiti looked. 35mm color 200.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/my-stuff/dad-bruegers.jpeg">
+                    <div class="info-content">        
+                        <p>my dad sitting in brueger's bagels. i like how the light reflects in watercolor.</p>
+                    </div>
+                </div>   
+                
+                <div id="myModal" class="modal">
+                    <span class="close-button">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close-button")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+
+            // Get all images and insert the clicked image inside the modal
+            // Get the content of the image description and insert it inside the modal image caption
+            var images = document.getElementsByTagName('img');
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+
+            var i;
+            for (i = 0; i < images.length; i++) {
+                images[i].onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.nextElementSibling.innerHTML;
+                }
+            }
+        </script>
+
+</body>
+</html>
